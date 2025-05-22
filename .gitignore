@@ -1,0 +1,11 @@
+# Ignore frontend and backend node_modules
+sports-analytics/node_modules/
+backend/node_modules/
+
+# General ignores
+.DS_Store
+.env
+*.log
+
+# Ignore coverage reports
+coverage/
