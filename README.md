@@ -22,5 +22,5 @@ A web-based full-stack application that delivers comprehensive NBA insights — 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/nba-sports-analytics.git
-   cd nba-sports-analytics
+   git clone https://github.com/Natewilliams91/Capstone-Project.git
+   cd Capstone-Project
