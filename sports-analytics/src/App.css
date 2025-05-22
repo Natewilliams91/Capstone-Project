@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+ 
+input, select {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+

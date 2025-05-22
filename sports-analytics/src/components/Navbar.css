@@ -1,0 +1,139 @@
+
+.navbar {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;    
+  padding: 1rem 2rem;
+  box-shadow: var(--card-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--transition-speed);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  transition: transform var(--transition-speed);
+}
+
+.navbar h1:hover {
+  transform: scale(1.05);
+}
+
+
+.links {
+  margin-left: auto;      
+  display: flex;
+  gap: 2rem;              
+  align-items: center;
+}
+
+
+.links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed);
+  position: relative;
+}
+
+
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary-color);
+  transition: all var(--transition-speed);
+  transform: translateX(-50%);
+}
+
+.links a:hover::after {
+  width: 80%;
+}
+
+
+.links a:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-1px);
+}
+
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-color);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: var(--card-shadow);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.1rem;
+  }
+
+  .links a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}

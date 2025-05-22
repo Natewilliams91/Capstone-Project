@@ -1,0 +1,360 @@
+.player-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.player-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: var(--surface-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.player-detail-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: var(--card-shadow);
+  border: 2px solid var(--border-color);
+}
+
+.player-detail-name {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+.player-detail-info {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: var(--surface-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.tab-navigation button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.tab-navigation button:hover {
+  color: var(--primary-color);
+  background-color: var(--hover-color);
+}
+
+.tab-navigation button.active {
+  color: var(--primary-color);
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+.table-wrapper {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+  max-height: 600px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.player-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.player-detail-table th,
+.player-detail-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-detail-table th {
+  background-color: var(--surface-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.player-detail-table tbody {
+  display: block;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.player-detail-table thead,
+.player-detail-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.player-detail-table tbody tr:hover {
+  background-color: var(--hover-color);
+}
+
+.stats-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.stats-filter button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  background: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.stats-filter button.active,
+.stats-filter button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.predictions-section,
+.gamelog-section,
+.stats-section {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.prediction-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.prediction-value {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.prediction-details {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+}
+
+.prediction-details p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.prediction-details p:first-child {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.predict-button {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.predict-button:hover {
+  background-color: #357abd;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-message {
+  text-align: center;
+  color: var(--error-color);
+  padding: 1rem;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  border: 1px solid var(--error-color);
+}
+
+.player-detail-table tbody::-webkit-scrollbar {
+  width: 8px;
+}
+
+.player-detail-table tbody::-webkit-scrollbar-track {
+  background: var(--surface-color);
+}
+
+.player-detail-table tbody::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.player-detail-table tbody::-webkit-scrollbar-thumb:hover {
+  background: #357abd;
+}
+
+.performance-chart {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chart-header h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.stat-toggles {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: black;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+}
+
+.stat-toggle:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow);
+}
+
+.stat-toggle.active {
+  opacity: 1;
+  color: Black;
+  box-shadow: var(--card-shadow);
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .player-detail-container {
+    padding: 1rem;
+  }
+
+  .player-header {
+    padding: 1rem;
+  }
+
+  .player-detail-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .player-detail-name {
+    font-size: 2rem;
+  }
+
+  .tab-navigation {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tab-navigation button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .table-wrapper {
+    max-height: 400px;
+  }
+
+  .player-detail-table tbody {
+    max-height: 300px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat-toggles {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+  
+  .performance-chart {
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+}

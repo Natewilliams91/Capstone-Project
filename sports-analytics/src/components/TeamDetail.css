@@ -1,0 +1,222 @@
+/* Container for the entire page */
+.team-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: sans-serif; 
+  }
+  
+
+  .team-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+
+  .team-detail-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 2rem;
+    display: block;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+
+  .team-detail-roster-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+  
+
+  .team-detail-roster-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+ 
+  .team-detail-roster-list li {
+    background: var(--surface-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+  }
+  
+  .team-detail-roster-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+    background: var(--hover-color);
+  }
+  
+
+  .team-detail-roster-list li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+  }
+  
+  .team-detail-roster-list li a:hover {
+    color: var(--primary-color);
+    background-color: var(--hover-color);
+  }
+  
+
+  .team-detail-no-players {
+    text-align: center;
+    color: var(--text-color);
+    font-style: italic;
+    padding: 2rem;
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  @media (max-width: 768px) {
+    .team-detail-container {
+      padding: 1rem 0.5rem;
+    }
+  
+    .team-detail-title {
+      font-size: 2rem;
+    }
+  
+    .team-detail-logo {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .team-detail-roster-title {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+    }
+  
+    .team-detail-roster-list {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+  
+    .team-detail-roster-list li {
+      padding: 0.75rem;
+    }
+  
+    .team-detail-roster-list li a {
+      font-size: 1rem;
+      padding: 0.4rem;
+    }
+  }
+  
+  .team-stats-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .team-stats-section h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
+  }
+  
+  .stats-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    min-width: 150px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .stat-percentage {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-top: 0.25rem;
+  }
+  
+  .stats-chart {
+    margin-top: 2rem;
+  }
+  
+  .stats-chart h4 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 1rem;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  @media (max-width: 768px) {
+    .team-stats-section {
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+  
+    .stats-summary {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .stat-item {
+      width: 100%;
+      max-width: 200px;
+    }
+  
+    .chart-container {
+      height: 300px;
+    }
+  }
+  
